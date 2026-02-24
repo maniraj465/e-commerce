@@ -10,7 +10,7 @@ services:
 #      MYSQL_PASSWORD: Alliswell@1
       MYSQL_ROOT_PASSWORD: Alliswell@1
     ports:
-        - "3306:3306"
+        - "3307:3306"
     volumes:
       - ./mysql-data:/var/lib/mysql
 #      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

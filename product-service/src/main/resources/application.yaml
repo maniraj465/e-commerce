@@ -6,5 +6,5 @@ spring:
 # MongoDB Database Configuration
     data:
         mongodb:
-        uri: mongodb://maniraj:Alliswell@1@localhost:27017/product-service?authSource=admin
+        uri: mongodb://maniraj:Alliswell@1@localhost:27017/product_service?authSource=admin
 #        database: product-service

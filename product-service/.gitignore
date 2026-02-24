@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Ignore data folder in root ###
+/data/
+/product-service/data/
