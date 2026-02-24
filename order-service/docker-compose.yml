@@ -1,0 +1,21 @@
+version: '4'
+
+services:
+  mysql:
+    image: mysql:8.3.0
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: order_service
+#      MYSQL_USER: maniraj
+#      MYSQL_PASSWORD: Alliswell@1
+      MYSQL_ROOT_PASSWORD: Alliswell@1
+    ports:
+        - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command:
+      --default-authentication-plugin=mysql_native_password
+
+volumes:
+  mysql-data:

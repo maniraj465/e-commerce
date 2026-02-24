@@ -1,0 +1,16 @@
+version: '4'
+
+services:
+  mongodb:
+    image: mongo:7.0.5
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: maniraj
+      MONGO_INITDB_ROOT_PASSWORD: Alliswell@1
+      MONGO_INITDB_DATABASE: product-service
+
+    volumes:
+      - ./data:/data/db
