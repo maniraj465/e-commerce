@@ -24,7 +24,10 @@ class OrderServiceApplicationTests {
 	void setup() {
 		RestAssured.baseURI = "http://localhost";
 		RestAssured.port = port;
+	}
 
+	static {
+		mySQLContainer.start();
 	}
 
 	@Test

@@ -107,3 +107,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+
+### MySQL Data Directory ###
+# Ignore entire data directory
+/docker/mysql/data/
+/docker/mysql/data/*
+!/docker/mysql/data/.gitkeep

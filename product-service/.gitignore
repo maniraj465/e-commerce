@@ -32,6 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 
-### Ignore data folder in root ###
-/data/
-/product-service/data/
+### MySQL Data Directory ###
+# Ignore entire data directory
+/docker/mysql/data/
+/docker/mysql/data/*
+!/docker/mysql/data/.gitkeep

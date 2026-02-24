@@ -12,7 +12,7 @@
 	<artifactId>product-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>product-service</name>
-	<description>Spring Boot project for product service</description>
+	<description>Spring Boot application for product service</description>
 	<url/>
 	<licenses>
 		<license/>
