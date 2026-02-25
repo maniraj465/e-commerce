@@ -35,7 +35,7 @@ class InventoryServiceApplicationTests {
 	@Test
 	void shouldReadInventory() {
 		var response = RestAssured.given()
-				.queryParam("skuCode", "iPhone 17")
+				.queryParam("skuCode", "iphone_15")
 				.queryParam("quantity", 2)
 				.when()
 				.get("/api/inventory")
@@ -46,7 +46,7 @@ class InventoryServiceApplicationTests {
 		Assertions.assertTrue(response);
 
 		var negativeResponse = RestAssured.given()
-				.queryParam("skuCode", "iPhone 17")
+				.queryParam("skuCode", "iphone_15")
 				.queryParam("quantity", 200)
 				.when()
 				.get("/api/inventory")
