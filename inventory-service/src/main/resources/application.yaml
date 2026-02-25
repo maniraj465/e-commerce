@@ -4,7 +4,7 @@ spring:
 
   # MySQL Database Configuration
   datasource:
-    url: jdbc:mysql://localhost:3307/inventory_service
+    url: jdbc:mysql://localhost:3316/inventory_service
     username: root
     password: Alliswell@1
     #    username: maniraj
@@ -17,3 +17,5 @@ spring:
 
 server:
   port: 8082
+
+debug: true
