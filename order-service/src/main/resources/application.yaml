@@ -19,3 +19,7 @@ server:
   port: 8081
 
 debug: true
+
+
+inventory:
+  url: http://localhost:8082
