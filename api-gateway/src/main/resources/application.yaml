@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: api-gateway
+
+server:
+  port: 9000
+
+debug: true

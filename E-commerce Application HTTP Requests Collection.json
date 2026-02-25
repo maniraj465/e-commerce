@@ -1,0 +1,238 @@
+{
+  "v": 11,
+  "name": "E-commerce Application",
+  "folders": [
+    {
+      "v": 11,
+      "name": "Product Service",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Product",
+          "method": "POST",
+          "endpoint": "http://127.0.0.1:8080/api/products",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"iPhone 17 Pro\",\n  \"description\": \"iPhone 17 Pro is a latest smartphone from Apple\",\n  \"price\": 600000\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authActive": true,
+        "authType": "inherit"
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Order Service",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Submit Order",
+          "method": "POST",
+          "endpoint": "http://127.0.0.1:8081/api/orders",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"skuCode\": \"iphone_15\",\n  \"price\": 999.99,\n  \"quantity\": 1\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authActive": true,
+        "authType": "inherit"
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Inventory Service",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Get Inventory",
+          "method": "GET",
+          "endpoint": "http://127.0.0.1:8082/api/inventory?skuCode=iPhone_15&quantity=100",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get All Inventory",
+          "method": "GET",
+          "endpoint": "http://127.0.0.1:8082/api/inventory/all",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "API Gateway",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Get products",
+          "method": "GET",
+          "endpoint": "http://127.0.0.1:9000/api/products",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Submit Order",
+          "method": "POST",
+          "endpoint": "http://127.0.0.1:9000/api/orders",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"skuCode\": \"iphone_15\",\n  \"price\": 999.99,\n  \"quantity\": 1\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get All Inventory",
+          "method": "GET",
+          "endpoint": "http://127.0.0.1:9000/api/inventory/all",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Inventory",
+          "method": "GET",
+          "endpoint": "http://127.0.0.1:9000/api/inventory?skuCode=iPhone_15&quantity=100",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "description": ""
+}

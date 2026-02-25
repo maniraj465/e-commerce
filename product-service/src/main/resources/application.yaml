@@ -2,9 +2,14 @@ spring:
   application:
     name: product-service
 
-
 # MongoDB Database Configuration
-    data:
-        mongodb:
-        uri: mongodb://maniraj:Alliswell@1@localhost:27017/product_service?authSource=admin
-#        database: product-service
+  data:
+    mongodb:
+      uri: mongodb://maniraj:Alliswell@1@localhost:27017/product_service?authSource=admin
+#      database: product-service
+
+server:
+  port: 8080
+
+
+debug: true
