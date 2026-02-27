@@ -121,8 +121,8 @@
         }
       ],
       "auth": {
-        "authType": "inherit",
-        "authActive": true
+        "authActive": true,
+        "authType": "inherit"
       },
       "headers": [],
       "variables": [],
@@ -164,8 +164,23 @@
           "preRequestScript": "",
           "testScript": "",
           "auth": {
-            "authType": "inherit",
-            "authActive": true
+            "authType": "oauth-2",
+            "authActive": true,
+            "addTo": "HEADERS",
+            "grantTypeInfo": {
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": [],
+              "tokenEndpoint": "",
+              "isPKCE": false,
+              "codeVerifierMethod": "S256",
+              "authRequestParams": [],
+              "grantType": "CLIENT_CREDENTIALS",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzIyMTAyNTksImlhdCI6MTc3MjIwOTk1OSwianRpIjoiY2I4MGMyMTctNTZmZC00MzIwLTkzMjktMDk2Y2QyOTNkOTBmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.JdfCqcuqQPbDHNUZBVeSioXrGdKrCqF33vspYxxutesMau8YuDWTS81HKPlcXn_m2MaTq6NgxiakDajEzCW-7JA5svQUzGasrwVFd6EDMj3Sim7FkfogmQsc1XUL7ZMXKxCIWZy5vdD16fHpisTSc-FW-WMWbM6m63FWEfZqwkLKPk23fNXf1Bci-PM1yM77uaSzdCEZ5VjbNi2m1QAARz0urhY-FFB3kYGsUwIuW_oWez-5nrkLUAiuo2APS94R84kQF4SjVzLDVnWAM3dx-J85OWogpyyb36XhSIDbmjSt7AKYPMtoPo3wMYhfeg4BOOD3rDowLHu8S0qS28NayQ"
+            }
           },
           "body": {
             "contentType": "application/json",
@@ -185,8 +200,23 @@
           "preRequestScript": "",
           "testScript": "",
           "auth": {
-            "authType": "inherit",
-            "authActive": true
+            "authType": "oauth-2",
+            "authActive": true,
+            "addTo": "HEADERS",
+            "grantTypeInfo": {
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": [],
+              "tokenEndpoint": "",
+              "isPKCE": false,
+              "codeVerifierMethod": "S256",
+              "authRequestParams": [],
+              "grantType": "CLIENT_CREDENTIALS",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzIyMTA0MDMsImlhdCI6MTc3MjIxMDEwMywianRpIjoiMGRmOGZjZTItMWE2MS00MGZkLWIzNmUtY2YxOGQ0MTQ2NzcxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.kX3z_M4SUTX8Qea6WXdzOHW4SydDp9QJiw7_8UPzxWhJr7ZkFUHK5cjclUZFPoekj3-FusgJOzQTSQFUXuqj76F1LHh381sUlaw1yuGIwoNb2rDdw3fn3RMtufQYDHlSW6B0P3y4NkuwKtuBZwtlJbWmXMcWJfF1UkamcL3fx64UFsHfy9kAE81NDuFzIptUGsm38IcD0yqXyQJWIj0_zv7UfNCCvmApQFlX1RdIROXEVunEHgb0JprhExQpXwDn17qYyYe_i1YjMi-RbBQMK9wk3D5k_-T5I7qKz8uiM5PTESRvgBlulDc8qag-WkxMRg28mkXyNJWfZiwxAgKTFQ"
+            }
           },
           "body": {
             "contentType": null,
@@ -206,8 +236,23 @@
           "preRequestScript": "",
           "testScript": "",
           "auth": {
-            "authType": "inherit",
-            "authActive": true
+            "authType": "oauth-2",
+            "authActive": true,
+            "addTo": "HEADERS",
+            "grantTypeInfo": {
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": [],
+              "tokenEndpoint": "",
+              "isPKCE": false,
+              "codeVerifierMethod": "S256",
+              "authRequestParams": [],
+              "grantType": "CLIENT_CREDENTIALS",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzIyMTA0NTksImlhdCI6MTc3MjIxMDE1OSwianRpIjoiMTQ1NzI1ZTMtOTgzMC00YThhLWFmMjQtMzRhZDIwMzYxMWJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.Lkkzlv53BOZG-4CeR7M0jWhzAWTriAOlVhKkRWSyJ5pEHgmb4iFt1XsRKNtyXy8gbsJRRfMCYr3v0eFadl4P_ggFTyfXBbfrxDijkA9eobF7LiEFCy779nGNDcQieDhOwKistNffaCNn_txCMZwWOwV-jDVqmcKx6C3utrmyV7idvy9V8Ah7pKZVtWqx9REc87pLfZQExwMY-qPrvsLWQqDwjBVrPwjDpKySBJWXYnX4SpAcfo2VaUVhD8L-p_na5oN_SoMoQJmbXRJcKqv3TsdBw9v4NxGIE6LTktS5AMj5cA60FscvH3heIAhbIrwzPqs7YOLFq1Z2fWk-Xa1NIA"
+            }
           },
           "body": {
             "contentType": null,

@@ -31,3 +31,84 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+
+### MySQL/Docker Volume Data ###
+# Ignore all volume data
+/volume-data/
+/volume-data/*
+!/volume-data/.gitkeep
+
+# Ignore Keycloak data
+/keycloak-data/
+/keycloak-data/*
+!/keycloak-data/.gitkeep
+
+# MySQL specific files
+**/mysql_keycloak_data/
+**/mysql_keycloak_data/*
+!**/mysql_keycloak_data/.gitkeep
+*.sock
+*.cnf
+*.index
+*.pid
+*.log
+*.ibd
+*.frm
+*.ib_logfile*
+binlog.*
+auto.cnf
+ib_buffer_pool
+ibtmp1
+undo_*
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings/
+bin/
+out/
+
+### VS Code ###
+.vscode/
+*.code-workspace
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.lock
+*.ser
+*.tmp
+*.orig
+*~
+.springBeans
+
+### Environment ###
+.env
+application-local.yaml
+application-dev.yaml
+application-*.yaml
+!application.yaml
+
+### Docker ###
+docker-compose.override.yaml

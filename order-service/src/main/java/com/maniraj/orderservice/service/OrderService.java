@@ -17,6 +17,9 @@ public class OrderService {
     private final InventoryClient inventoryClient;
 
     public Order placeOrder(OrderRequest orderRequest) {
+
+        System.out.println("Checking inventory for SKU code: " + orderRequest.skuCode() + " and quantity: " + orderRequest.quantity());
+
         var isProductInStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
 
         if (isProductInStock) {
