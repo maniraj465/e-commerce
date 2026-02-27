@@ -6,6 +6,10 @@ spring:
     oauth2:
       resourceserver.jwt.issuer-uri: http://localhost:8181/realms/e-commerce-microservices-security-realm
 
+  swagger-ui:
+    path: /swagger-ui.html
+
+
 server:
   port: 9000
 

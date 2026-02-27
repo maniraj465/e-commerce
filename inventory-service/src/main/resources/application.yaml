@@ -15,6 +15,9 @@ spring:
         ddl-auto: none
       show-sql: true
 
+  swagger-ui:
+    path: /swagger-ui.html
+
 server:
   port: 8082
 
