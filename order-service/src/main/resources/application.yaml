@@ -15,10 +15,11 @@ spring:
         ddl-auto: none
       show-sql: true
 
-
+springdoc:
   swagger-ui:
     path: /swagger-ui.html
-
+  api-docs:
+    path: /v1/api-docs
 
 server:
   port: 8081

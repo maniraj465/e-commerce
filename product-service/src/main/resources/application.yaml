@@ -8,9 +8,13 @@ spring:
       uri: mongodb://maniraj:Alliswell@1@localhost:27017/product_service?authSource=admin
 #      database: product-service
 
-
+springdoc:
   swagger-ui:
     path: /swagger-ui.html
+  api-docs:
+    path: /v1/api-docs
+
+
 
 server:
   port: 8080
