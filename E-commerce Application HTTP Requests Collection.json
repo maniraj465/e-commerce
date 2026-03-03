@@ -22,7 +22,7 @@
           },
           "body": {
             "contentType": "application/json",
-            "body": "{\n  \"name\": \"iPhone 17 Pro\",\n  \"description\": \"iPhone 17 Pro is a latest smartphone from Apple\",\n  \"price\": 600000\n}\n"
+            "body": "{\n  \"skuCode\": \"oneplus_12\",\n  \"name\": \"Oneplus 12\",\n  \"description\": \"Oneplus 12 is a latest smartphone from Oneplus\",\n  \"price\": 70000\n}\n\n\n"
           },
           "requestVariables": [],
           "responses": {},
@@ -121,8 +121,8 @@
         }
       ],
       "auth": {
-        "authActive": true,
-        "authType": "inherit"
+        "authType": "inherit",
+        "authActive": true
       },
       "headers": [],
       "variables": [],
@@ -143,48 +143,23 @@
           "preRequestScript": "",
           "testScript": "",
           "auth": {
-            "authType": "inherit",
-            "authActive": true
+            "authType": "oauth-2",
+            "grantTypeInfo": {
+              "grantType": "CLIENT_CREDENTIALS",
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzI1Mjk5MDcsImlhdCI6MTc3MjUyOTYwNywianRpIjoiZWQ2YzJlNTktZWEyMy00NWZkLTg2YzItZTBiMjQ3MzRlZDJiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.QMXYZ1qF6LPJL5Fuf69uPcmb8hfxaSUAmNkT-AH7YkMRSwLqdXu1_XSZivOvuJECY9D78Wew6beH8v85VsRePf-P3e1KOwF0lhAKBaqJdtBAt3GRI4qEHnDlNs6n5FtdrvexhioiGiG0plUSKe80XeWu_21JhrXXCQjo5h3MIAMxsz-BT9gpLVMWvEpFN3aIuysgKzVSOriJSR6WZ500wJ0NLmIysT_GAxa_s8of1mmJ-Nv-xUyiY49P7pajKpM-C52TY1aAqtdkArRtZ9v9AlXTv-3lqTIUhDZzcLzgpruwJTYxQjDSDp_YJTzqRD7R_Wf6ip-7DiwSnJ5XfPOHxA",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": []
+            },
+            "addTo": "HEADERS",
+            "authActive": false
           },
           "body": {
             "contentType": null,
             "body": null
-          },
-          "requestVariables": [],
-          "responses": {},
-          "description": null
-        },
-        {
-          "v": "17",
-          "name": "Submit Order",
-          "method": "POST",
-          "endpoint": "http://127.0.0.1:9000/api/orders",
-          "params": [],
-          "headers": [],
-          "preRequestScript": "",
-          "testScript": "",
-          "auth": {
-            "authType": "oauth-2",
-            "authActive": true,
-            "addTo": "HEADERS",
-            "grantTypeInfo": {
-              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
-              "clientID": "e-commerce-microservices-client-credentials-id",
-              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
-              "clientAuthentication": "IN_BODY",
-              "tokenRequestParams": [],
-              "refreshRequestParams": [],
-              "tokenEndpoint": "",
-              "isPKCE": false,
-              "codeVerifierMethod": "S256",
-              "authRequestParams": [],
-              "grantType": "CLIENT_CREDENTIALS",
-              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzIyMTAyNTksImlhdCI6MTc3MjIwOTk1OSwianRpIjoiY2I4MGMyMTctNTZmZC00MzIwLTkzMjktMDk2Y2QyOTNkOTBmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.JdfCqcuqQPbDHNUZBVeSioXrGdKrCqF33vspYxxutesMau8YuDWTS81HKPlcXn_m2MaTq6NgxiakDajEzCW-7JA5svQUzGasrwVFd6EDMj3Sim7FkfogmQsc1XUL7ZMXKxCIWZy5vdD16fHpisTSc-FW-WMWbM6m63FWEfZqwkLKPk23fNXf1Bci-PM1yM77uaSzdCEZ5VjbNi2m1QAARz0urhY-FFB3kYGsUwIuW_oWez-5nrkLUAiuo2APS94R84kQF4SjVzLDVnWAM3dx-J85OWogpyyb36XhSIDbmjSt7AKYPMtoPo3wMYhfeg4BOOD3rDowLHu8S0qS28NayQ"
-            }
-          },
-          "body": {
-            "contentType": "application/json",
-            "body": "{\n  \"skuCode\": \"iphone_15\",\n  \"price\": 999.99,\n  \"quantity\": 1\n}\n"
           },
           "requestVariables": [],
           "responses": {},
@@ -201,22 +176,50 @@
           "testScript": "",
           "auth": {
             "authType": "oauth-2",
-            "authActive": true,
-            "addTo": "HEADERS",
             "grantTypeInfo": {
+              "grantType": "CLIENT_CREDENTIALS",
               "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
               "clientID": "e-commerce-microservices-client-credentials-id",
               "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzI1NDgzNTksImlhdCI6MTc3MjU0ODA1OSwianRpIjoiY2RmZjQwZjItNDRhYi00Mzk4LTg2MzQtOGZiMWJmZTkwYzNjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.ikkcb_GdYN1UnBIZJIEe0bfJIPMnaC-aY-AdogNcml9sXc3nteDB-FsEose8QwSBVHpr4r1o3_6GdjKCZXYgj4NLvvxGgHLHmFVIvx-FsGWN-nQr5rr83qrCmLP6l9HW0Awc5PZS64_WV5XMYqPHBpXmDOGg_XidQEDLq2XGGbiGsh2bmT4AvqcIBLyqbpvBzGmrVLQv5qHvL3gEvu_w6vqU-XrH3C0CUqVwSeTOYOrWUao5Uij_8q_vYWq-SFshyjmR2TBQQlurBLLxn4L8P2C9erye-wSzkHUfY2PiSPkBqmTvs-iygKvxVOEiUXercdvx5LvV4XDuE6SyAUVhPA",
               "clientAuthentication": "IN_BODY",
               "tokenRequestParams": [],
-              "refreshRequestParams": [],
-              "tokenEndpoint": "",
-              "isPKCE": false,
-              "codeVerifierMethod": "S256",
-              "authRequestParams": [],
+              "refreshRequestParams": []
+            },
+            "addTo": "HEADERS",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get All Inventory",
+          "method": "GET",
+          "endpoint": "http://127.0.0.1:9000/api/inventory/all",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "oauth-2",
+            "grantTypeInfo": {
               "grantType": "CLIENT_CREDENTIALS",
-              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzIyMTA0MDMsImlhdCI6MTc3MjIxMDEwMywianRpIjoiMGRmOGZjZTItMWE2MS00MGZkLWIzNmUtY2YxOGQ0MTQ2NzcxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.kX3z_M4SUTX8Qea6WXdzOHW4SydDp9QJiw7_8UPzxWhJr7ZkFUHK5cjclUZFPoekj3-FusgJOzQTSQFUXuqj76F1LHh381sUlaw1yuGIwoNb2rDdw3fn3RMtufQYDHlSW6B0P3y4NkuwKtuBZwtlJbWmXMcWJfF1UkamcL3fx64UFsHfy9kAE81NDuFzIptUGsm38IcD0yqXyQJWIj0_zv7UfNCCvmApQFlX1RdIROXEVunEHgb0JprhExQpXwDn17qYyYe_i1YjMi-RbBQMK9wk3D5k_-T5I7qKz8uiM5PTESRvgBlulDc8qag-WkxMRg28mkXyNJWfZiwxAgKTFQ"
-            }
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzI1Mjk2OTgsImlhdCI6MTc3MjUyOTM5OCwianRpIjoiMGE5Y2YyYzAtNTdkNS00ZDRkLWJlMTYtNzY2YTA4YTk3YTIxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.BU3A5tUAV1B4vKMXT78Amfrg_jzyztySNyq82_DP0m3nfANIs9Y9XOLf3VabxRfZ-g-D34yZoSOpQDlJQukEiVuxEqekJJrfHB9fkpg6VtFt8SZ86epSH3o3FMaLnDv6Ct-mzuvRp7nGbZDstlHmdUCgSMTl37tOiXTNoNsvw6DrWVNF-WbcMtitvBEjavgyVz9o-9rx64ccMOvmjF78wAfbIOzH_gi9SquzEXV024xgO0x5KV45_fnR-z3E0E-gUKCyYQqoHJGCVDy6I7l7XmKKA83ZdwGZ8zgYZBYgC9jph7QSvGUjaUcyeUthIvm0FbhDkZViuJLpchnxJ5yyOQ",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": []
+            },
+            "addTo": "HEADERS",
+            "authActive": true
           },
           "body": {
             "contentType": null,
@@ -237,22 +240,135 @@
           "testScript": "",
           "auth": {
             "authType": "oauth-2",
-            "authActive": true,
-            "addTo": "HEADERS",
             "grantTypeInfo": {
+              "grantType": "CLIENT_CREDENTIALS",
               "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
               "clientID": "e-commerce-microservices-client-credentials-id",
               "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzI1Mjk3MDIsImlhdCI6MTc3MjUyOTQwMiwianRpIjoiZmQyZmE1NzgtODQwYy00ZDkxLWE1NDItZTY5ZmQxNjg0Yjk0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.nqNVs7-jLe9LhJsUezPf3RibOt8WpRQ-LoxCa5-Fb7zZTDZHJwqGfSAX5f_wcJm-2GhALXfTxD1uciryAZOvenQRSSeGvUdiVwC0z1W3e5ukhKKzxwVI5ZKREKYTIV8I1ZZ7UvUwRM8R53EecvgQzAlOwHeuUv6p481Gr0ljG2LpyYkVOo6sy1_XQtaiyZ3HbW2t-wqOx_GTxDGwmiqyqDgSQ58zRYsC032gY8TBzajo1lH9UfgqnW1hf1v2UsaROWDUa8k2TbLTaBTYOJEDJtIrAcX7K4LdAr008kJyJuNdF6im12w4cBGGgnqeTzVpIvPm4Ulfz5VA6UZNqaFo2A",
               "clientAuthentication": "IN_BODY",
               "tokenRequestParams": [],
-              "refreshRequestParams": [],
-              "tokenEndpoint": "",
-              "isPKCE": false,
-              "codeVerifierMethod": "S256",
-              "authRequestParams": [],
+              "refreshRequestParams": []
+            },
+            "addTo": "HEADERS",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get products",
+          "method": "GET",
+          "endpoint": "http://127.0.0.1:9000/api/products",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "oauth-2",
+            "grantTypeInfo": {
               "grantType": "CLIENT_CREDENTIALS",
-              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzIyMTA0NTksImlhdCI6MTc3MjIxMDE1OSwianRpIjoiMTQ1NzI1ZTMtOTgzMC00YThhLWFmMjQtMzRhZDIwMzYxMWJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.Lkkzlv53BOZG-4CeR7M0jWhzAWTriAOlVhKkRWSyJ5pEHgmb4iFt1XsRKNtyXy8gbsJRRfMCYr3v0eFadl4P_ggFTyfXBbfrxDijkA9eobF7LiEFCy779nGNDcQieDhOwKistNffaCNn_txCMZwWOwV-jDVqmcKx6C3utrmyV7idvy9V8Ah7pKZVtWqx9REc87pLfZQExwMY-qPrvsLWQqDwjBVrPwjDpKySBJWXYnX4SpAcfo2VaUVhD8L-p_na5oN_SoMoQJmbXRJcKqv3TsdBw9v4NxGIE6LTktS5AMj5cA60FscvH3heIAhbIrwzPqs7YOLFq1Z2fWk-Xa1NIA"
-            }
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzI1Mjk2ODcsImlhdCI6MTc3MjUyOTM4NywianRpIjoiMDIxYWJkMmEtNTk1Mi00YmVmLTgyMGItMWQ5OGE5OTJhZmNiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.PgRJGRN2JpMLytn4af-Sb5tU3Wjb13Zu1zkYZ2sz1rkz7SgagBdIJRwZFVnCIlGDnu5nkcuY9TjkIHpWtB9Mq08rBkeapHC6D850Ya34U76RUKeWMLZnIznhhY3F4eNkJPkGPsuOhts1kCq5-feIRaeIFRxDdjEftiCAaff_uGsK8lFPRLxVc2vJuzyRI970oCCSQWoLyCJ_XCxR7vgshgSL19Vf6MP720nw6alfjC9WDkOVcDaW1sw6aTZX9friocXYx7k0Z1wqlYFuTajCnhf5LFzuSneXA4EdEvz8O5EsDp9WgSzpO-ytfZypWlBrCFeQYdlOaxhPSEF_WJD4XA",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": []
+            },
+            "addTo": "HEADERS",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Order Swagger API Doc",
+          "method": "GET",
+          "endpoint": "http://localhost:9000/aggregate/order-service/v1/api-docs",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "oauth-2",
+            "grantTypeInfo": {
+              "grantType": "CLIENT_CREDENTIALS",
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzI1Mjk3MjAsImlhdCI6MTc3MjUyOTQyMCwianRpIjoiMDZmNzQzZGMtNzI3MS00MmRiLWI0MjAtYmM5YjBlYTQzYTRkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.cToDcnqyxdk6_Gj8QliskpLXd--hNobooBQZoMfM5btYAFKsXzF8YGVxTP-AUZsZ3ieQ08mIVGgA3lGzhz-nY_VOs3bGSKfpxIo-upMybNtCt4bX0ERwv0Hia8TjUcbhrCm9n4VC-In4D08UAftqTydvj0836oAOQ2MwyyeVKSXLkLnvbpjd0ET31INA-XZ-skJUHvwxDzxH_Nsoy3WtR9D9a_izpeAIbL-T7KKn1t14roXTnz8upRDsEKLXAV_dCtCin7fjsuOowzoL-3uh8wH8IT4fZmXV6HGYjANlcGUPTV1fvvO6FQDrwLBo12fsWhnPBO7lXOzq2y54K9kocQ",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": []
+            },
+            "addTo": "HEADERS",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Inventory Swagger API Doc",
+          "method": "GET",
+          "endpoint": "http://localhost:9000/aggregate/inventory-service/v1/api-docs",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "oauth-2",
+            "grantTypeInfo": {
+              "grantType": "CLIENT_CREDENTIALS",
+              "authEndpoint": "http://localhost:8181/realms/e-commerce-microservices-security-realm/protocol/openid-connect/token",
+              "clientID": "e-commerce-microservices-client-credentials-id",
+              "clientSecret": "maq8nEqdfbK825j57p7gqWBWQo0Wnbse",
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRS3RZekhzX0FJOFFmaGVJd3UzbVJ6NWpDdWZoUTdaeC1ocDhReFZmT0VzIn0.eyJleHAiOjE3NzI1Mjk3NTcsImlhdCI6MTc3MjUyOTQ1NywianRpIjoiZTExMjkzYjktNjk4ZC00NjA2LTkxYjItN2RmOTE4MWQyODVhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9lLWNvbW1lcmNlLW1pY3Jvc2VydmljZXMtc2VjdXJpdHktcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNjlhZDg5MTktNzQyMy00NjZkLTg1OTctMzRhMGY3MGI5YTQwIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiLyoiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLXNlY3VyaXR5LXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImNsaWVudEhvc3QiOiIxNzIuMjEuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCIsImNsaWVudEFkZHJlc3MiOiIxNzIuMjEuMC4xIiwiY2xpZW50X2lkIjoiZS1jb21tZXJjZS1taWNyb3NlcnZpY2VzLWNsaWVudC1jcmVkZW50aWFscy1pZCJ9.lcUiUR0GYYLaGBYFHiBXlVHqM6BlkrIxQ1O0tk0kPjToc4OOXwB9ajxKoHbOGaDfbnddAHhJQqPRL9KYgMRjcM8WVk2NS6hvpOSlw-0XC2kazrtkhjO-fezGwLmarxcmihmqUmQV27ycSjxTn7jTOVOlaFnhXWMGhK1lEFCmDGAeG9oTP8ygTxG2LdWW19hnWSy5RxOgPMvVuotMta9hzn8fAbN8eVS-09km0XOt6zZNvaoNFD3DOqu38WGxosxyVDgWYrUKs1Mi_60lvWZPb2pTI7AqGN21oixDMasBBvkjMisygP1WDNTUYaESdOaODuO4yFpCgQIIQ8TiWQRu9g",
+              "clientAuthentication": "IN_BODY",
+              "tokenRequestParams": [],
+              "refreshRequestParams": []
+            },
+            "addTo": "HEADERS",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Product service Swagger Docs",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
           },
           "body": {
             "contentType": null,
@@ -264,8 +380,8 @@
         }
       ],
       "auth": {
-        "authType": "inherit",
-        "authActive": true
+        "authActive": true,
+        "authType": "inherit"
       },
       "headers": [],
       "variables": [],

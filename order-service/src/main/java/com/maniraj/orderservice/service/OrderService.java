@@ -2,6 +2,7 @@ package com.maniraj.orderservice.service;
 
 import com.maniraj.orderservice.client.InventoryClient;
 import com.maniraj.orderservice.dto.OrderRequest;
+import com.maniraj.orderservice.exception.ProductNotInStockException;
 import com.maniraj.orderservice.model.Order;
 import com.maniraj.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +32,7 @@ public class OrderService {
 
             return orderRepository.save(order);
         } else {
-            throw new RuntimeException("Product with SKU code " + orderRequest.skuCode() + " is not in stock");
+            throw new ProductNotInStockException(orderRequest.skuCode(), orderRequest.quantity());
         }
     }
 }

@@ -1,0 +1,16 @@
+import { PassedInitialConfig } from "angular-auth-oidc-client";
+
+export const authConfig: PassedInitialConfig = {
+  config: {
+    authority:
+      "http://localhost:8181//realms/e-commerce-microservices-security-realm",
+    redirectUrl: window.location.origin,
+    postLogoutRedirectUri: window.location.origin,
+    clientId: "e-commerce-microservices-angular-client-credentials-id",
+    scope: "openid profile offline_access",
+    responseType: "code",
+    silentRenew: true,
+    useRefreshToken: true,
+    renewTimeBeforeTokenExpiresInSeconds: 30,
+  },
+};

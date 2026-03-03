@@ -20,4 +20,6 @@ public class Order {
     private String skuCode;
     private BigDecimal price;
     private Integer quantity;
+    @Embedded
+    private UserDetails userDetails;
 }
