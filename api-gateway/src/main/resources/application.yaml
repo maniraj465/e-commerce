@@ -6,11 +6,70 @@ spring:
     oauth2:
       resourceserver.jwt.issuer-uri: http://localhost:8181/realms/e-commerce-microservices-security-realm
 
+
+# Internal Service URLs
+services:
+  product:
+    url: http://localhost:8080
+  order:
+    url: http://localhost:8081
+  inventory:
+    url: http://localhost:8082
+
+# Swagger Configuration
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+    urls:
+      - name: Product Service
+        url: /aggregate/product-service/v1/api-docs
+      - name: Order Service
+        url: /aggregate/order-service/v1/api-docs
+      - name: Inventory Service
+        url: /aggregate/inventory-service/v1/api-docs
   api-docs:
     path: /v1/api-docs
+
+
+# Actuator Configuration
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+# Resilience4j Configuration
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        minimumNumberOfCalls: 5
+
+  retry:
+    configs:
+      default:
+        max-attempts: 3
+        wait-duration: 2s
+
+# Resilience4j TimeLimiter Configuration
+  timelimiter:
+    configs:
+      default:
+        timeout-duration: 3s
+
 
 server:
   port: 9000
