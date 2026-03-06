@@ -15,6 +15,15 @@ spring:
         ddl-auto: none
       show-sql: true
 
+# Kafka Configuration
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: order-placed
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
 
 # Swagger Configuration
 springdoc:
@@ -57,6 +66,7 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         minimumNumberOfCalls: 5
 
+# Retry Configuration
   retry:
     instances:
       inventory:
@@ -69,12 +79,13 @@ resilience4j:
       inventory:
         timeout-duration: 3s
 
+
 # Server Configuration
 server:
   port: 8081
 
 # Debug Configuration
-debug: true
+#debug: true
 
 # Internal Service URLs
 inventory:
