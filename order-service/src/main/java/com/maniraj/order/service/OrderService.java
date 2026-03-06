@@ -4,9 +4,9 @@ import java.util.UUID;
 
 import com.maniraj.order.client.InventoryClient;
 import com.maniraj.order.dto.OrderRequest;
- import com.maniraj.order.exception.ProductNotInStockException;
-import com.maniraj.order.model.Order;
 import com.maniraj.order.event.OrderPlacedEvent;
+import com.maniraj.order.exception.ProductNotInStockException;
+import com.maniraj.order.model.Order;
 import com.maniraj.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -43,10 +43,15 @@ public class OrderService {
             orderRepository.save(order);
 
             // Send the message to Kafka Topic
-            OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(), order.getUserDetails().getEmail());
+            OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent();
+            orderPlacedEvent.setOrderNumber(order.getOrderNumber());
+            orderPlacedEvent.setEmail(order.getUserDetails().getEmail());
+//            orderPlacedEvent.setFirstName(order.getUserDetails().getFirstName());
+//            orderPlacedEvent.setLastName(order.getUserDetails().getLastName());
+
             log.info("Start - sending order placed event to Kafka for order number: " + order.getOrderNumber());
             kafkaTemplate.send("order-placed", orderPlacedEvent);
-            log.info("End - sent order placed event to Kafka for                                                                                                                                                  order number: " + order.getOrderNumber());
+            log.info("End - sent order placed event to Kafka for order number: " + order.getOrderNumber());
 
             return order;
         } else {

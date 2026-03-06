@@ -11,14 +11,8 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-#        spring.json.type.mapping: event:com.maniraj.order.event.OrderPlacedEvent
+        spring.json.type.mapping: event:com.maniraj.order.event.OrderPlacedEvent
 
-#        # Trust the package where OrderPlacedEvent actually lives
-        spring.json.trusted.packages: "com.maniraj.notification.model"
-#        # Set the default type to the actual class
-        spring.json.value.default.type: com.maniraj.order.event.OrderPlacedEvent
-#        # Disable type headers if not using them
-        spring.json.use.type.headers: false
 
   # Mail configuration
   mail:
